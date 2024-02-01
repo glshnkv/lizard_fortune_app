@@ -1,0 +1,56 @@
+name: lizard_fortune_app
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.13.1
+  auto_route: ^7.8.4
+  flutter_svg: ^2.0.9
+  flutter_bloc: ^8.1.3
+  get_it: ^7.6.4
+  shared_preferences: ^2.2.2
+  flutter_countdown_timer: ^4.1.0
+  flutter_fortune_wheel: ^1.3.0
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  auto_route_generator: ^7.1.1
+  build_runner: ^2.4.4
+
+  flutter_lints: ^2.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_icon.png"
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+
+  fonts:
+     - family: GT Eesti Pro Display
+       fonts:
+         - asset: fonts/GTEestiProDisplay-Bold.ttf
+         - asset: fonts/GTEestiProDisplay-Medium.ttf
+         - asset: fonts/GTEestiProDisplay-Regular.ttf
+         - asset: fonts/GTEestiProDisplay-UltraBold.ttf
