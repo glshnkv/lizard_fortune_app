@@ -46,6 +46,17 @@ flutter:
 
   assets:
      - assets/images/
+     - assets/images/elements/
+     - assets/images/home/
+     - assets/images/daily_reward/
+     - assets/images/settings/
+     - assets/images/spots/
+     - assets/images/games-elements/
+     - assets/images/roulette/
+     - assets/images/slot/
+     - assets/images/pokies/
+     - assets/images/win/
+
 
   fonts:
      - family: GT Eesti Pro Display
