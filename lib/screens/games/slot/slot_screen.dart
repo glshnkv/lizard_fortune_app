@@ -122,7 +122,8 @@ class _SlotScreenState extends State<SlotScreen> {
         ),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
           child: Stack(
             children: [
               Center(
@@ -137,7 +138,7 @@ class _SlotScreenState extends State<SlotScreen> {
                           Image.asset(
                               'assets/images/games-elements/column.png'),
                           Align(
-                            alignment: Alignment(0, -0.57),
+                            alignment: Alignment(0, -0.6),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -175,19 +176,62 @@ class _SlotScreenState extends State<SlotScreen> {
                             child: Image.asset('assets/images/slot/slot-machine.png'),
                           ),
                           Align(
-                            alignment: Alignment(0, 0.42),
-                            child: Container(
-                              // color: Colors.white,
-                              height: 50,
-                              width: 300,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  Roll(image: images[selectedImages[0]]),
-                                  Roll(image: images[selectedImages[1]]),
-                                  Roll(image: images[selectedImages[2]]),
-                                ],
-                              ),
+                            alignment: Alignment(0, 0.6),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 300,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Roll(image: images[selectedImages[0+1]]),
+                                      Roll(image: images[selectedImages[1+1]]),
+                                      Roll(image: images[selectedImages[2-2]]),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 10,),
+                                Container(
+                                  height: 50,
+                                  width: 300,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Roll(image: images[selectedImages[0+1]]),
+                                      Roll(image: images[selectedImages[1-1]]),
+                                      Roll(image: images[selectedImages[2-1]]),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 10,),
+                                Container(
+                                  height: 50,
+                                  width: 300,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Roll(image: images[selectedImages[0]]),
+                                      Roll(image: images[selectedImages[1]]),
+                                      Roll(image: images[selectedImages[2]]),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 10,),
+                                Container(
+                                  height: 50,
+                                  width: 300,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Roll(image: images[selectedImages[0+1]]),
+                                      Roll(image: images[selectedImages[1+1]]),
+                                      Roll(image: images[selectedImages[2-2]]),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -323,7 +367,7 @@ class Roll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 100),
         child: Image.asset(image, height: 55, width: 55));
   }
 }
